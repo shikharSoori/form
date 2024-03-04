@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+.stepper {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.stepper li {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.stepper li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+}
+
+.stepper li.active {
+  font-weight: bold;
+}
+
+.stepper li.active:after {
+  background-color: blue;
+}
+
+.form-group {
+  label {
+    width: max-content;
+  }
+}
+
+
